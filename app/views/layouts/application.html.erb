@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FantasySportsCalculator</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <%= link_to "Fantasy Sports Calculator", :root, :class => "brand pull-left" %>
+        <div id="user_nav" class="pull-right">
+          <% if user_signed_in? %>
+            Hello, <%= current_user.first_name + " " + current_user.last_name %>. Not you?
+            <%= link_to "Sign out", destroy_user_session_path, :class => "btn", :method => :delete %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path, :class => "btn" %> or <%= link_to "sign in", new_user_session_path, :class => "btn" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+<%= yield %>
+
+</body>
+</html>

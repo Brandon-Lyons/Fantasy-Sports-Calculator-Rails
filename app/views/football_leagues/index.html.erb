@@ -1,0 +1,4 @@
+<% @football_leagues.each do |league| %>
+  <%= link_to league.name, football_league_path(league) %>
+<% end %>
+<%= link_to "Add", new_football_league_path, :class => "btn" %>
