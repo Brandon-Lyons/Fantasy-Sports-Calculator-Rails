@@ -28,8 +28,16 @@ class FootballLeaguesController < ApplicationController
   end
 
   def update
+    p params
     @football_league = FootballLeague.find( params[:id] )
-    if @football_league.update_attributes( params[:football_league] )
+    hash = params[:football_league]
+    new_hash = Hash[ hash.map{ |a, b| [a,
+      begin
+        Integer b
+      rescue ArgumentError
+        b
+      end]}]
+    if @football_league.update_attributes( new_hash )
       redirect_to :action => "index"
     else
       render 'edit'
