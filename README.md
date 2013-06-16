@@ -1,4 +1,5 @@
 #Fantasy Sports Calculator
+[![Code Climate](https://codeclimate.com/github/Brandon-Lyons/Fantasy-Sports-Calculator-Rails.png)](https://codeclimate.com/github/Brandon-Lyons/Fantasy-Sports-Calculator-Rails)
 
 This is Ruby on Rails app for my final capstone project at the [Nashville Software School](http://nashvillesoftwareschool.com/). This app is the same as my previous CLI [project](https://github.com/Brandon-Lyons/Fantasy-Sports-Calculator) but it now has an interface and is expanding to include other fantasy sports.
 
