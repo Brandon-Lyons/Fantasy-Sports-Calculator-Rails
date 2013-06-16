@@ -1,5 +1,5 @@
 <h2>Create New Football League</h2>
-<%= form_for @football_league do |f| %>
+<%= form_for @football_league, :as => :football_league, :url => user_football_leagues_path(current_user), :html => {:method => :post} do |f| %>
     <%= f.label :name, "Name"  %>
     <%= f.text_field :name %>
     <h3>Pass</h3>

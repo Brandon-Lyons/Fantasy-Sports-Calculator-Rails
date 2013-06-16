@@ -15,7 +15,8 @@ class FootballLeaguesController < ApplicationController
       UserFootballLeague.create(user_id: current_user.id, football_league_id: FootballLeague.last.id)
       redirect_to :action => "index"
     else
-      redirect_to :action => "index"
+      flash[:notice] = @football_league.errors.full_messages.join
+      redirect_to :action => "new"
     end
   end
 
@@ -40,7 +41,8 @@ class FootballLeaguesController < ApplicationController
     if @football_league.update_attributes( new_hash )
       redirect_to user_football_league_url(current_user, @football_league)
     else
-      render 'edit'
+      flash[:notice] = @football_league.errors.full_messages.join
+      redirect_to edit_user_football_league_path(current_user, @football_league)
     end
   end
 

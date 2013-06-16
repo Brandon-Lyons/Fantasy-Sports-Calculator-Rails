@@ -16,7 +16,7 @@
             Hello, <%= current_user.first_name + " " + current_user.last_name %>. Not you?
             <%= link_to "Sign out", destroy_user_session_path, :class => "btn", :method => :delete %>
           <% else %>
-            <%= link_to "Sign up", new_user_registration_path, :class => "btn" %> or <%= link_to "sign in", new_user_session_path, :class => "btn" %>
+            <%= link_to "Sign Up", new_user_registration_path, :class => "btn" %> or <%= link_to "Sign In", new_user_session_path, :class => "btn" %>
           <% end %>
         </div>
       </div>
