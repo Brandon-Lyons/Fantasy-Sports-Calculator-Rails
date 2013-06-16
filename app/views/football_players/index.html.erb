@@ -1,0 +1,5 @@
+<ul>
+<% @players.each do |player| %>
+  <li><%= link_to player.first_name + " " + player.last_name, football_player_path(player) %></li>
+<% end %>
+</ul>

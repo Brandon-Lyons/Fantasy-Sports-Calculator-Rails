@@ -24,7 +24,7 @@ class FootballLeaguesController < ApplicationController
   end
 
   def edit
-    @football_league = FootballLeague.find( params[:id] )
+    @football_league = current_user.football_leagues.find( params[:id] )
   end
 
   def update
@@ -38,10 +38,16 @@ class FootballLeaguesController < ApplicationController
         b
       end]}]
     if @football_league.update_attributes( new_hash )
-      redirect_to :action => "index"
+      redirect_to user_football_league_url(current_user, @football_league)
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @football_league = FootballLeague.find( params[:id] )
+    @football_league.destroy
+    redirect_to :action => "index"
   end
 
 

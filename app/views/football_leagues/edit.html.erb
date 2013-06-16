@@ -1,5 +1,5 @@
 <h2>Edit</h2>
-<%= form_for @football_league do |f| %>
+<%= form_for [current_user, @football_league] do |f| %>
     <%= f.label :name, "Name"  %>
     <%= f.text_field :name %>
     <h3>Pass</h3>
