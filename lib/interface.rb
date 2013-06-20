@@ -4,10 +4,10 @@ module Interface
 
 
   def player_profile(player_id)
-    uri = URI("http://api.nfldata.apiphany.com/trial/JSON/Player/#{player_id}")
+    uri = URI("http://api.nfldata.apiphany.com/developer/JSON/Player/#{player_id}")
 
     uri.query = URI.encode_www_form({
-      'key' => 'fbc568ac-614d-4eae-9031-926a36e3b3bd',
+      'key' => '1dca78d0-2f19-4954-863a-338f4f2ab105',
       })
 
     request = Net::HTTP::Get.new(uri.request_uri)
@@ -23,10 +23,10 @@ module Interface
   end
 
   def player_stats(year, week, player_id)
-    uri = URI("http://api.nfldata.apiphany.com/trial/JSON/PlayerGameStatsByPlayerID/#{year}/#{week}/#{player_id}")
+    uri = URI("http://api.nfldata.apiphany.com/developer/JSON/PlayerGameStatsByPlayerID/#{year}/#{week}/#{player_id}")
 
     uri.query = URI.encode_www_form({
-      'key' => 'fbc568ac-614d-4eae-9031-926a36e3b3bd',
+      'key' => '1dca78d0-2f19-4954-863a-338f4f2ab105',
       })
 
     request = Net::HTTP::Get.new(uri.request_uri)

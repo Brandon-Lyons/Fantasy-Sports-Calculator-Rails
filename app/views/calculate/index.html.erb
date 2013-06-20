@@ -1,9 +1,9 @@
 <p>Please select the position of your player</p>
 <div class="btn-group">
-  <%= link_to "Quarterback", football_players_path(position: "QB"),  :class => "btn" %>
-  <%= link_to "Running Back", football_players_path(position: "RB"), :class => "btn" %>
-  <%= link_to "Tight End", football_players_path(position: "TE"), :class => "btn" %>
-  <%= link_to "Wide Receiver", football_players_path(position: "WR"), :class => "btn" %>
-  <%= link_to "Defense/ST", football_players_path, :class => "btn disabled" %>
-  <%= link_to "Kicker", football_players_path(position: "K"), :class => "btn" %>
+  <%= link_to "Quarterback", user_football_players_path(current_user, position: "QB"),  :class => "btn" %>
+  <%= link_to "Running Back", user_football_players_path(current_user, position: "RB"), :class => "btn" %>
+  <%= link_to "Tight End", user_football_players_path(current_user, position: "TE"), :class => "btn" %>
+  <%= link_to "Wide Receiver", user_football_players_path(current_user, position: "WR"), :class => "btn" %>
+  <%= link_to "Defense/ST", user_football_players_path(current_user), :class => "btn disabled" %>
+  <%= link_to "Kicker", user_football_players_path(current_user, position: "K"), :class => "btn" %>
 </div>

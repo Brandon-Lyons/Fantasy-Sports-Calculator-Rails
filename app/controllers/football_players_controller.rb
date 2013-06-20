@@ -6,8 +6,15 @@ class FootballPlayersController < ApplicationController
   end
 
   def show
+    @user = current_user
     @player = FootballPlayer.find( params[:id] )
     @profile = @player.profile(@player.player_id)
+  end
+
+  def create
+    @user = User.find(params[:user_id])
+    @player = FootballPlayer.where(player_id: params[:stats][:player_id]).first
+    @stats = @player.stats(params[:stats][:year], params[:stats][:week], params[:stats][:player_id])
   end
 
   private

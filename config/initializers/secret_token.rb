@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-FantasySportsCalculator::Application.config.secret_token = 'f0b76c809da99c4580b387d335e5f1311425d716616f07b72bc49f41628084809910f9d3e3e8a6593147614d72807e13ff6e3fe2065d632095c0364d095f507d'
+FantasySportsCalculator::Application.config.secret_token = '0e9d2373219f6ed6d57d8ef69f2c4a2ec50fa90fe4858360f3c1338b564270882988f4cd98714abb3bb899a001176133b8e90c43923b2367379c424d004d26de'

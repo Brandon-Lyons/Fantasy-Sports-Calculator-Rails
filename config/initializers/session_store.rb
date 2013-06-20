@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file.
 
-FantasySportsCalculator::Application.config.session_store :cookie_store, key: '_Fantasy_Sports_Calculator_session'
+FantasySportsCalculator::Application.config.session_store :cookie_store, key: '_fantasy_sports_calculator_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
