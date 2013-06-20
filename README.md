@@ -15,11 +15,18 @@ This is Ruby on Rails app for my final capstone project at the [Nashville Softwa
 
 ##Usage
 
-Be aware that this app uses postgresql and Python so a server must be on and Python must be installed.<br />
+Be aware that this app uses postgresql so a server must be on.<br />
+Once you clone this repo cd into the directory and run bundler<br />
+`bundle`<br />
+then create the database<br />
+`rake db:create:all`<br />
+run the migrations<br />
+`rake db:migrate`<br />
+then start the server<br />
+`rails s`<br />
 To run the tests:<br />
 `rake`<br />
-To start the rails server:<br />
-`rails s`
+
 
 ##Author
 
