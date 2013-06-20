@@ -1,9 +1,11 @@
 <% if @football_leagues.empty? %>
-    <%= "You have no Leagues, please click Add to create a league" %>
+    <h4><%= "You have no Leagues, please click Add to create a league" %></h4>
 <% else %>
+  <ul>
   <% @football_leagues.each do |league| %>
-    <%= link_to league.name, user_football_league_path(@user, league) %>
+    <li><%= link_to league.name, user_football_league_path(@user, league) %></li>
   <% end %>
+  </ul
 <% end %>
 <div class="btn-group">
   <%= link_to "Add", new_user_football_league_path(@user), :class => "btn" %>

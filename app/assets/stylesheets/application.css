@@ -18,3 +18,11 @@
  table{
   text-align: center;
  }
+
+ ul{
+  list-style: none;
+ }
+
+ thead{
+  text-align: center;
+ }

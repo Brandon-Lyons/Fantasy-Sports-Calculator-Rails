@@ -25,5 +25,4 @@ class FootballPlayersController < ApplicationController
       @param = FootballPlayer
     end
   end
-
 end

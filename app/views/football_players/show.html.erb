@@ -7,9 +7,9 @@
 
 <div id="stats"></div>
 
-<form action="/users/<%= @user.id %>/football_players" class="new_post" id="new_post" method="post">
-  <input type="text" name="stats[year]" id="stats-year" placeholder="Year" />
-  <input type="text" name="stats[week]" id="stats-week" placeholder="Week" />
-  <input type="hidden" name="stats[player_id]" value="<%= @player.player_id %>">
-  <button type="submit" id="stats-submit" class="btn">Calculate</button>
-</form>
+<%= form_tag("/users/#{@user.id}/football_players", :method => "post") do %>
+  <%= text_field_tag("stats[year]", nil, :placeholder => "Year") %>
+  <%= text_field_tag("stats[week]", nil, :placeholder => "Week") %>
+  <%= hidden_field_tag("stats[player_id]", "#{@player.player_id}") %>
+  <%= submit_tag "Calculate" %>
+<% end %>

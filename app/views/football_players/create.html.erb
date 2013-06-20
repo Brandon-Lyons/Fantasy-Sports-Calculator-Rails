@@ -1,6 +1,6 @@
 <h2><%= @player.first_name + " " + @player.last_name %></h2>
 <h4>Opponent: <%= @stats["Opponent"] %></h4>
-<table class="table-hover table-bordered">
+<table class="table table-hover table-bordered">
   <thead class="text-center">
     <tr>
       <th class="text-center">Passing</th>
@@ -25,7 +25,7 @@
     <td><%= @stats["PassingInterceptions"] %></td>
   </tr>
 </table>
-<table class="table-hover table-bordered">
+<table class="table table-hover table-bordered">
   <thead class="text-center">
     <tr>
       <th class="text-center">Rushing</th>
@@ -46,7 +46,7 @@
     <td><%= @stats["PassingTouchdowns"] %></td>
   </tr>
 </table>
-<table class="table-hover table-bordered">
+<table class="table table-hover table-bordered">
   <thead class="text-center">
     <tr>
       <th class="text-center">Receiving</th>

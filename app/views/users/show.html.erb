@@ -1,3 +1,9 @@
+<% if @user.sign_in_count > 1 %>
+  <h2><%= "Welcome back, #{@user.first_name.capitalize}!" %></h2>
+<% else %>
+  <h2><%= "Welcome, #{@user.first_name}!" %></h2>
+<% end %>
+<p>Here are the sports you can calculate for. Pick one and start calculating!</p>
 <div class="btn-group">
   <%= link_to "Football", user_football_leagues_path(current_user), :class => "btn" %>
 </div>
