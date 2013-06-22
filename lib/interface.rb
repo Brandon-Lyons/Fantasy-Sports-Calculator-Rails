@@ -35,7 +35,11 @@ module Interface
       http.request(request)
     end
 
-    stats = JSON.parse(response.body)
+    if response.body.empty?
+      stats = {"error" => "Sorry there are no stats to show! Please go back and enter a valid week and/or year. This sometimes happens if the player is on a bye week."}
+    else
+      stats = JSON.parse(response.body)
+    end
 
     stats
   end
