@@ -25,5 +25,12 @@
     <%= f.number_field :rec_yards %>
     <%= f.label :rec_2pt, "2 point conversion" %>
     <%= f.number_field :rec_2pt %>
+    <h3>Kicking</h3>
+    <%= f.label :fg_made, "Made Field Goal" %>
+    <%= f.number_field :fg_made %>
+    <%= f.label :fg_missed, "Missed Field Goal" %>
+    <%= f.number_field :fg_missed %>
+    <%= f.label :pat_made, "Made PAT" %>
+    <%= f.number_field :pat_made %>
     <%= f.submit "Submit" %>
 <% end %>

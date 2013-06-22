@@ -14,7 +14,8 @@ class FootballPlayer < ActiveRecord::Base
     pass = pass_score(stats, league)
     rush = rush_score(stats, league)
     rec = rec_score(stats, league)
-    total = pass + rush + rec
+    kick = kick_score(stats, league)
+    total = pass + rush + rec + kick
     total
   end
 
@@ -60,6 +61,21 @@ class FootballPlayer < ActiveRecord::Base
     yards_score = (yards / 10) * yard_rule
     two_pt_score = two_pt * two_pt_rule
     total = td_score + yards_score + two_pt_score
+    total
+  end
+
+  def kick_score(stats, league)
+    fg_made = stats["FieldGoalsMade"].to_i
+    fg_miss = stats["FieldGoalsAttempted"].to_i - stats["FieldGoalsMade"].to_i
+    pat_made = stats["ExtraPointsMade"].to_i
+    pat_miss = stats["ExtraPointsAttempted"].to_i - stats["ExtraPointsMade"].to_i
+    fgmade_rule = league.fg_made
+    fg_miss_rule = league.fg_missed
+    patmade_rule = league.pat_made
+    fgmade_score = fg_made * fgmade_rule
+    fgmiss_score = (fg_miss * fg_miss_rule) + (pat_miss * fg_miss_rule)
+    patmade_score = pat_made * patmade_rule
+    total = fgmade_score + fgmiss_score + patmade_score
     total
   end
 end

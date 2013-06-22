@@ -61,6 +61,25 @@
     <td><%= @football_league.rec_2pt %></td>
   </tr>
 </table>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Kicking</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>Made Field Goal</td>
+    <td><%= @football_league.fg_made %></td>
+  </tr>
+  <tr>
+    <td>Missed Field Goal</td>
+    <td><%= @football_league.fg_missed %></td>
+  </tr>
+  <tr>
+    <td>Made PAT</td>
+    <td><%= @football_league.pat_made %></td>
+  </tr>
+</table>
 <div class="btn-group">
   <%= link_to "Back to List", user_football_leagues_path(current_user), :class => "btn" %>
   <%= link_to "Edit", edit_user_football_league_path(@football_league), :class => "btn" %>

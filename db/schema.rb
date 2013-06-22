@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130614164700) do
+ActiveRecord::Schema.define(:version => 20130622173500) do
 
   create_table "football_leagues", :force => true do |t|
     t.string  "name"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(:version => 20130614164700) do
     t.integer "rec_yards",  :default => 1
     t.integer "rec_td",     :default => 6
     t.integer "rec_2pt",    :default => 2
+    t.integer "fg_made",    :default => 3
+    t.integer "fg_missed",  :default => -1
+    t.integer "pat_made",   :default => 1
   end
 
   create_table "football_players", :force => true do |t|
