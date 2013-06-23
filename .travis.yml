@@ -3,5 +3,5 @@ rvm:
   - "2.0.0"
 before_script:
   - rake db:create:all
+  - rake db:test:prepare
   - rake db:migrate
-
