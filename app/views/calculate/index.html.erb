@@ -4,6 +4,6 @@
   <%= link_to "Running Back", user_football_players_path(current_user, position: "RB"), :class => "btn" %>
   <%= link_to "Tight End", user_football_players_path(current_user, position: "TE"), :class => "btn" %>
   <%= link_to "Wide Receiver", user_football_players_path(current_user, position: "WR"), :class => "btn" %>
-  <%= link_to "Defense/ST", user_football_players_path(current_user), :class => "btn disabled" %>
+  <%= link_to "Defense/ST", user_football_teams_path(current_user), :class => "btn" %>
   <%= link_to "Kicker", user_football_players_path(current_user, position: "K"), :class => "btn" %>
 </div>

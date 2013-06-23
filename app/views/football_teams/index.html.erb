@@ -1,0 +1,5 @@
+<ul>
+  <% @teams.each do |team| %>
+    <li><%= link_to team.full_name, user_football_team_path(current_user, team) %></li>
+  <% end %>
+</ul>
