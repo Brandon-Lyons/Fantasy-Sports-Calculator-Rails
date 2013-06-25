@@ -26,3 +26,14 @@
  thead{
   text-align: center;
  }
+
+ #profile-img{
+  float: left;
+ }
+
+ #profile{
+ }
+
+ #player-info{
+  float: left;
+ }

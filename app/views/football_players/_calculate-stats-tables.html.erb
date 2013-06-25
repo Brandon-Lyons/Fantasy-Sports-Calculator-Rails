@@ -1,0 +1,116 @@
+<% team = FootballTeam.where(abbr_name: @stats["Opponent"]).first %>
+<h2><%= @player.first_name + " " + @player.last_name %></h2>
+<h4>Opponent: <%= team.full_name %></h4>
+<% if @player.position == "K" %>
+  <table class="table table-hover table-bordered">
+    <thead class="text-center">
+      <tr>
+        <th>FGM</th>
+        <th>FGA</th>
+        <th>FG%</th>
+        <th>PAT</th>
+      </tr>
+    </thead>
+    <tr>
+      <th><%= @stats["FieldGoalsMade"] %></th>
+      <th><%= @stats["FieldGoalsAttempted"] %></th>
+      <th><%= @stats["FieldGoalPercentage"] %></th>
+      <th><%= "#{@stats["ExtraPointsMade"]}/#{@stats["ExtraPointsAttempted"]}" %></th>
+    </tr>
+  </table>
+<% elsif @player.position == "QB" %>
+  <table class="table table-hover table-bordered">
+    <thead class="text-center">
+      <tr>
+        <th class="text-center">Passing</th>
+      </tr>
+      <tr>
+        <th>Cmp</th>
+        <th>Att</th>
+        <th>Cmp%</th>
+        <th>Yds</th>
+        <th>Lng</th>
+        <th>TD</th>
+        <th>Int</th>
+      </tr>
+    </thead>
+    <tr>
+      <td><%= @stats["PassingCompletions"] %></td>
+      <td><%= @stats["PassingAttempts"] %></td>
+      <td><%= @stats["PassingCompletionPercentage"] %></td>
+      <td><%= @stats["PassingYards"] %></td>
+      <td><%= @stats["PassingLong"] %></td>
+      <td><%= @stats["PassingTouchdowns"] %></td>
+      <td><%= @stats["PassingInterceptions"] %></td>
+    </tr>
+  </table>
+  <table class="table table-hover table-bordered">
+    <thead class="text-center">
+      <tr>
+        <th class="text-center">Rushing</th>
+      </tr>
+      <tr>
+        <th>Att</th>
+        <th>Yds</th>
+        <th>Avg</th>
+        <th>Lng</th>
+        <th>TD</th>
+      </tr>
+    </thead>
+    <tr>
+      <td><%= @stats["RushingAttempts"] %></td>
+      <td><%= @stats["RushingYards"] %></td>
+      <td><%= @stats["RushingYardsPerAttempt"] %></td>
+      <td><%= @stats["RushingLong"] %></td>
+      <td><%= @stats["PassingTouchdowns"] %></td>
+    </tr>
+  </table>
+<% else %>
+  <table class="table table-hover table-bordered">
+    <thead class="text-center">
+      <tr>
+        <th class="text-center">Rushing</th>
+      </tr>
+      <tr>
+        <th>Att</th>
+        <th>Yds</th>
+        <th>Avg</th>
+        <th>Lng</th>
+        <th>TD</th>
+      </tr>
+    </thead>
+    <tr>
+      <td><%= @stats["RushingAttempts"] %></td>
+      <td><%= @stats["RushingYards"] %></td>
+      <td><%= @stats["RushingYardsPerAttempt"] %></td>
+      <td><%= @stats["RushingLong"] %></td>
+      <td><%= @stats["PassingTouchdowns"] %></td>
+    </tr>
+  </table>
+  <table class="table table-hover table-bordered">
+    <thead class="text-center">
+      <tr>
+        <th class="text-center">Receiving</th>
+      </tr>
+      <tr>
+        <th>Rec</th>
+        <th>Yds</th>
+        <th>Avg</th>
+        <th>Lng</th>
+        <th>TD</th>
+      </tr>
+    </thead>
+    <tr>
+      <td><%= @stats["Receptions"] %></td>
+      <td><%= @stats["ReceivingYards"] %></td>
+      <td><%= @stats["ReceivingYardsPerReception"] %></td>
+      <td><%= @stats["ReceivingLong"] %></td>
+      <td><%= @stats["ReceivingTouchdowns"] %></td>
+    </tr>
+  </table>
+<% end %>
+<ul>
+  <% @user.football_leagues.each do |league| %>
+    <li><%= "#{league.name} score is #{@player.scores(@stats, league)}" %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,6 @@
+<% team = FootballTeam.where(abbr_name: @profile["CurrentTeam"]).first %>
+<p>#<%= @profile["Number"] %> <%= @profile["Position"] %> | <%= @profile["Height"] %> <%= @profile["Weight"] %> lbs. | <%= team.full_name %></p>
+<p>Birth Date: <%= @profile["BirthDateString"] %></p>
+<p>Age: <%= @profile["Age"] %></p>
+<p>College: <%= @profile["College"] %></p>
+<p>Experience: <%= @profile["ExperienceString"] %></p>

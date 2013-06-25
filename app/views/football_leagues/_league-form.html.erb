@@ -1,0 +1,35 @@
+<%= form_for [current_user, @football_league] do |f| %>
+    <%= f.label :name, "Name"  %>
+    <%= f.text_field :name %>
+    <h3>Pass</h3>
+    <%= f.label :pass_td, "Touchdown" %>
+    <%= f.number_field :pass_td %>
+    <%= f.label :pass_yards, "Every 25 Yards" %>
+    <%= f.number_field :pass_yards %>
+    <%= f.label :int, "Interception" %>
+    <%= f.number_field :int %>
+    <%= f.label :pass_2pt, "2 point conversion" %>
+    <%= f.number_field :pass_2pt %>
+    <h3>Rush</h3>
+    <%= f.label :rush_td, "Touchdown" %>
+    <%= f.number_field :rush_td %>
+    <%= f.label :rush_yards, "Every 10 Yards" %>
+    <%= f.number_field :rush_yards %>
+    <%= f.label :rush_2pt, "2 point conversion" %>
+    <%= f.number_field :rush_2pt %>
+    <h3>Receiving</h3>
+    <%= f.label :rec_td, "Touchdown" %>
+    <%= f.number_field :rec_td %>
+    <%= f.label :rec_yards, "Every 10 Yards" %>
+    <%= f.number_field :rec_yards %>
+    <%= f.label :rec_2pt, "2 point conversion" %>
+    <%= f.number_field :rec_2pt %>
+    <h3>Kicking</h3>
+    <%= f.label :fg_made, "Made Field Goal" %>
+    <%= f.number_field :fg_made %>
+    <%= f.label :fg_missed, "Missed Field Goal" %>
+    <%= f.number_field :fg_missed %>
+    <%= f.label :pat_made, "Made PAT" %>
+    <%= f.number_field :pat_made %>
+    <%= f.submit "Submit" %>
+<% end %>

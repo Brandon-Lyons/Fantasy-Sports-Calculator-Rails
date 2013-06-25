@@ -1,89 +1,10 @@
 <h2><%= @football_league.name.upcase %></h2>
 <div class="container">
-<table class="table table-bordered table-hover">
-  <thead>
-    <tr>
-      <th>Pass</th>
-    </tr>
-  </thead>
-  <tr>
-    <td>Touchdown</td>
-    <td><%= @football_league.pass_td %></td>
-  </tr>
-  <tr>
-    <td>Every 25 Yards</td>
-    <td><%= @football_league.pass_yards %></td>
-  </tr>
-  <tr>
-    <td>Interception</td>
-    <td><%= @football_league.int %></td>
-  </tr>
-  <tr>
-    <td>2 point conv</td>
-    <td><%= @football_league.pass_2pt %></td>
-  </tr>
-</table>
-<table class="table table-bordered table-hover">
-  <thead>
-    <tr>
-      <th>Rush</th>
-    </tr>
-  </thead>
-  <tr>
-    <td>Touchdown</td>
-    <td><%= @football_league.rush_td %></td>
-  </tr>
-  <tr>
-    <td>Every 10 Yards</td>
-    <td><%= @football_league.rush_yards %></td>
-  </tr>
-  <tr>
-    <td>2 point conv</td>
-    <td><%= @football_league.rush_2pt %></td>
-  </tr>
-</table>
-<table class="table table-bordered table-hover">
-  <thead>
-    <tr>
-      <th>Receiving</th>
-    </tr>
-  </thead>
-  <tr>
-    <td>Touchdown</td>
-    <td><%= @football_league.rec_td %></td>
-  </tr>
-  <tr>
-    <td>Every 10 Yards</td>
-    <td><%= @football_league.rec_yards %></td>
-  </tr>
-  <tr>
-    <td>2 point conv</td>
-    <td><%= @football_league.rec_2pt %></td>
-  </tr>
-</table>
-<table class="table table-bordered table-hover">
-  <thead>
-    <tr>
-      <th>Kicking</th>
-    </tr>
-  </thead>
-  <tr>
-    <td>Made Field Goal</td>
-    <td><%= @football_league.fg_made %></td>
-  </tr>
-  <tr>
-    <td>Missed Field Goal</td>
-    <td><%= @football_league.fg_missed %></td>
-  </tr>
-  <tr>
-    <td>Made PAT</td>
-    <td><%= @football_league.pat_made %></td>
-  </tr>
-</table>
-<div class="btn-group">
-  <%= link_to "Back to List", user_football_leagues_path(current_user), :class => "btn" %>
-  <%= link_to "Edit", edit_user_football_league_path(@football_league), :class => "btn" %>
-  <%= link_to "Delete",[current_user, @football_league], :method => :delete, :class => "btn" %>
-  <%= link_to "Calculate", calculate_index_path, :class => "btn" %>
-</div>
+  <%= render "league-show-tables" %>
+  <div class="btn-group">
+    <%= link_to "Back to List", user_football_leagues_path(current_user), :class => "btn" %>
+    <%= link_to "Edit", edit_user_football_league_path(@football_league), :class => "btn" %>
+    <%= link_to "Delete",[current_user, @football_league], :method => :delete, :class => "btn" %>
+    <%= link_to "Calculate", calculate_index_path, :class => "btn" %>
+  </div>
 </div>

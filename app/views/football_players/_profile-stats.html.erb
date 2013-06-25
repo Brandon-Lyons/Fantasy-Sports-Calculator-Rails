@@ -1,0 +1,52 @@
+<p><%= @profile["PlayerSeason"]["Season"] %> Season</p>
+<% if @player.position == "QB" %>
+  <table class="table table-bordered">
+    <thead>
+      <th>Rating</th>
+      <th>Yards</th>
+      <th>TD</th>
+    </thead>
+    <tr>
+      <td><%= @profile["PlayerSeason"]["PassingRating"] %></td>
+      <td><%= @profile["PlayerSeason"]["PassingYards"] %></td>
+      <td><%= @profile["PlayerSeason"]["PassingTouchdowns"] %></td>
+    </tr>
+  </table>
+<% elsif @player.position == "RB" %>
+  <table class="table table-bordered">
+    <thead>
+      <th>Carries</th>
+      <th>Yards</th>
+      <th>TD</th>
+    </thead>
+    <tr>
+      <td><%= @profile["PlayerSeason"]["RushingAttempts"] %></td>
+      <td><%= @profile["PlayerSeason"]["RushingYards"] %></td>
+      <td><%= @profile["PlayerSeason"]["RushingTouchdowns"] %></td>
+    </tr>
+  </table>
+<% elsif @player.position == "K" %>
+  <table class="table table-bordered">
+    <thead>
+      <th>FGM</th>
+      <th>XPM</th>
+    </thead>
+    <tr>
+      <td><%= @profile["PlayerSeason"]["FieldGoalsMade"] %></td>
+      <td><%= @profile["PlayerSeason"]["ExtraPointsMade"] %></td>
+    </tr>
+  </table>
+<% else %>
+  <table class="table table-bordered">
+    <thead>
+      <th>Rec</th>
+      <th>Yards</th>
+      <th>TD</th>
+    </thead>
+    <tr>
+      <td><%= @profile["PlayerSeason"]["Receptions"] %></td>
+      <td><%= @profile["PlayerSeason"]["ReceivingYards"] %></td>
+      <td><%= @profile["PlayerSeason"]["ReceivingTouchdowns"] %></td>
+    </tr>
+  </table>
+<% end %>
