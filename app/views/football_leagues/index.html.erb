@@ -1,6 +1,7 @@
 <% if @football_leagues.empty? %>
     <h4><%= "You have no Leagues, please click Add to create a league" %></h4>
 <% else %>
+  <h3>Here are your Football Leagues!</h3>
   <ul>
   <% @football_leagues.each do |league| %>
     <li><%= link_to league.name, user_football_league_path(@user, league) %></li>

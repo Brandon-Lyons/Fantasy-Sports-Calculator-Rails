@@ -11,4 +11,6 @@
     <%= link_to "Defense/ST", user_football_teams_path(current_user), :class => "btn" %>
     <%= link_to "Kicker", user_football_players_path(current_user, position: "K"), :class => "btn" %>
   </div>
+  <br><br>
+  <%= link_to "Back to leagues", user_football_leagues_path(@user), :class => "btn" %>
 <% end %>
