@@ -1,11 +1,11 @@
 FantasySportsCalculator::Application.routes.draw do
   devise_for :users 
   resources :users do
+    resources :calculate, only: :index
     resources :football_leagues
     resources :football_players
     resources :football_teams
   end
-  resources :calculate, only: :index
   root :to => "home#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.

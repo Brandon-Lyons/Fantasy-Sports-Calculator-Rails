@@ -1,9 +1,14 @@
-<p>Please select the position of your player</p>
-<div class="btn-group">
-  <%= link_to "Quarterback", user_football_players_path(current_user, position: "QB"),  :class => "btn" %>
-  <%= link_to "Running Back", user_football_players_path(current_user, position: "RB"), :class => "btn" %>
-  <%= link_to "Tight End", user_football_players_path(current_user, position: "TE"), :class => "btn" %>
-  <%= link_to "Wide Receiver", user_football_players_path(current_user, position: "WR"), :class => "btn" %>
-  <%= link_to "Defense/ST", user_football_teams_path(current_user), :class => "btn" %>
-  <%= link_to "Kicker", user_football_players_path(current_user, position: "K"), :class => "btn" %>
-</div>
+<% if @leagues.count == 0 %>
+  <p>Please create a league to calculate with.</p>
+  <%= link_to "Create a League", new_user_football_league_path(@user), :class => "btn" %>
+<% else %>
+  <p>Please select the position of your player</p>
+  <div class="btn-group">
+    <%= link_to "Quarterback", user_football_players_path(current_user, position: "QB"),  :class => "btn" %>
+    <%= link_to "Running Back", user_football_players_path(current_user, position: "RB"), :class => "btn" %>
+    <%= link_to "Tight End", user_football_players_path(current_user, position: "TE"), :class => "btn" %>
+    <%= link_to "Wide Receiver", user_football_players_path(current_user, position: "WR"), :class => "btn" %>
+    <%= link_to "Defense/ST", user_football_teams_path(current_user), :class => "btn" %>
+    <%= link_to "Kicker", user_football_players_path(current_user, position: "K"), :class => "btn" %>
+  </div>
+<% end %>
