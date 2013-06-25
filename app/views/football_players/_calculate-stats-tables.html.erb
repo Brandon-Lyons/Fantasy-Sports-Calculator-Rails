@@ -1,5 +1,4 @@
 <% team = FootballTeam.where(abbr_name: @stats["Opponent"]).first %>
-<h2><%= @player.first_name + " " + @player.last_name %></h2>
 <h4>Opponent: <%= team.full_name %></h4>
 <% if @player.position == "K" %>
   <table class="table table-hover table-bordered">

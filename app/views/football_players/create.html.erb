@@ -1,6 +1,13 @@
 <% if @stats.has_key?("error") %>
   <p><%= @stats["error"] %></p>
 <% else %>
+  <h2><%= @player.first_name + " " + @player.last_name %></h2>
+  <div class="row-fluid" id="profile">
+    <img id="profile-img" src="<%= @profile['PhotoUrl'] %>" />
+    <div id="player-info" class="span4">
+      <%= render "player-info" %>
+    </div>
+  </div>
   <%= render "calculate-stats-tables" %>
 <% end %>
 <div class="btn-group">
