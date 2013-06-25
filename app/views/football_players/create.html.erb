@@ -4,6 +4,7 @@
   <%= render "calculate-stats-tables" %>
 <% end %>
 <div class="btn-group">
-  <%= link_to "Back to player select", calculate_index_path, :class => "btn" %>
-  <%= link_to "Back to profile", user_path(@user), :class => "btn" %>
+  <%= link_to "Back to player select", user_calculate_index_path(@user), :class => "btn" %>
+  <%= link_to "Back to user profile", user_path(@user), :class => "btn" %>
+  <%= link_to "Back to player profile", user_football_player_path(@user, @player), :class => "btn" %>
 </div>
