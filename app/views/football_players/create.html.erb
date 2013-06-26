@@ -7,8 +7,10 @@
     <div id="player-info" class="span4">
       <%= render "player-info" %>
     </div>
+    <div class="span6">
+      <%= render "calculate-stats-tables" %>
+    </div>
   </div>
-  <%= render "calculate-stats-tables" %>
 <% end %>
 <div class="btn-group">
   <%= link_to "Back to player select", user_calculate_index_path(@user), :class => "btn" %>
