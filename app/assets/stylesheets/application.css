@@ -61,3 +61,34 @@
  #score-list{
   margin-top: 5px;
  }
+
+ #football-slide{
+  text-align: center;
+  color: white;
+  background-image: url(/assets/football-field.jpg);
+  height: 500px;
+ }
+
+ #football-slide-inner{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 150px;
+ }
+
+ #basketball-slide{
+  text-align: right;
+  color: white;
+  background-image: url(/assets/basketball.jpg);
+  height: 500px;
+ }
+
+ #basketball-slide-inner{
+  width: 30%;
+  float: right;
+  padding-right: 30px;
+ }
+
+ #myCarousel{
+  margin-top: -20px;
+ }
