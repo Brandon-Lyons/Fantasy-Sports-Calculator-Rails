@@ -1,9 +1,10 @@
 <% if @leagues.count == 0 %>
-  <p>Please create a league to calculate with.</p>
+  <p id="calculate-text">Please create a league to calculate with.</p>
   <%= link_to "Create a League", new_user_football_league_path(@user), :class => "btn" %>
 <% else %>
-  <p>Please select the position of your player</p>
-  <div class="btn-group">
+  <p id="calculate-text">Please select the position of your player</p>
+  <br>
+  <div class="btn-group pagination-centered span12">
     <%= link_to "Quarterback", user_football_players_path(current_user, position: "QB"),  :class => "btn" %>
     <%= link_to "Running Back", user_football_players_path(current_user, position: "RB"), :class => "btn" %>
     <%= link_to "Tight End", user_football_players_path(current_user, position: "TE"), :class => "btn" %>
@@ -11,6 +12,8 @@
     <%= link_to "Defense/ST", user_football_teams_path(current_user), :class => "btn" %>
     <%= link_to "Kicker", user_football_players_path(current_user, position: "K"), :class => "btn" %>
   </div>
-  <br><br>
-  <%= link_to "Back to leagues", user_football_leagues_path(@user), :class => "btn" %>
+  <br><br><br>
+  <div class="span12 pagination-centered">
+    <%= link_to "Back to leagues", user_football_leagues_path(@user), :class => "btn pagination-centered" %>
+  </div>
 <% end %>

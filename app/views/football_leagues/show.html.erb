@@ -1,7 +1,7 @@
-<h2><%= @football_league.name.upcase %></h2>
+<h2 class="pagination-centered"><%= @football_league.name.upcase %></h2>
 <div class="container">
   <%= render "league-show-tables" %>
-  <div class="btn-group">
+  <div class="span12 pagination-centered" >
     <%= link_to "Back to List", user_football_leagues_path(current_user), :class => "btn" %>
     <%= link_to "Edit", edit_user_football_league_path(@football_league), :class => "btn" %>
     <%= link_to "Delete",[current_user, @football_league], :method => :delete, :class => "btn" %>

@@ -37,3 +37,27 @@
  #player-info{
   float: left;
  }
+
+ .profile-text{
+  text-align: center;
+ }
+
+ .league-index-text{
+  text-align: center;
+ }
+
+ #league-index-btns{
+  margin-top: 10px;
+ }
+
+ #calculate-text{
+  text-align: center;
+ }
+
+ strong{
+  font-size: 20px;
+ }
+
+ #score-list{
+  margin-top: 5px;
+ }

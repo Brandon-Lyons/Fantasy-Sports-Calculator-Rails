@@ -6,6 +6,11 @@
     <img id="profile-img" src="<%= @profile['PhotoUrl'] %>" />
     <div id="player-info" class="span4">
       <%= render "player-info" %>
+      <ul id="score-list">
+        <% @user.football_leagues.each do |league| %>
+          <li><strong><%= "#{league.name.upcase} score is #{@player.scores(@stats, league)}" %></strong></li>
+        <% end %>
+      </ul>
     </div>
     <div class="span6">
       <%= render "calculate-stats-tables" %>

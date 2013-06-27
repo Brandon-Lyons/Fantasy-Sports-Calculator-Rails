@@ -1,80 +1,84 @@
-<table class="table table-bordered table-hover">
-  <thead>
+<div class="span5 offset1">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Pass</th>
+      </tr>
+    </thead>
     <tr>
-      <th>Pass</th>
+      <td>Touchdown</td>
+      <td><%= @football_league.pass_td %></td>
     </tr>
-  </thead>
-  <tr>
-    <td>Touchdown</td>
-    <td><%= @football_league.pass_td %></td>
-  </tr>
-  <tr>
-    <td>Every 25 Yards</td>
-    <td><%= @football_league.pass_yards %></td>
-  </tr>
-  <tr>
-    <td>Interception</td>
-    <td><%= @football_league.int %></td>
-  </tr>
-  <tr>
-    <td>2 point conv</td>
-    <td><%= @football_league.pass_2pt %></td>
-  </tr>
-</table>
-<table class="table table-bordered table-hover">
-  <thead>
     <tr>
-      <th>Rush</th>
+      <td>Every 25 Yards</td>
+      <td><%= @football_league.pass_yards %></td>
     </tr>
-  </thead>
-  <tr>
-    <td>Touchdown</td>
-    <td><%= @football_league.rush_td %></td>
-  </tr>
-  <tr>
-    <td>Every 10 Yards</td>
-    <td><%= @football_league.rush_yards %></td>
-  </tr>
-  <tr>
-    <td>2 point conv</td>
-    <td><%= @football_league.rush_2pt %></td>
-  </tr>
-</table>
-<table class="table table-bordered table-hover">
-  <thead>
     <tr>
-      <th>Receiving</th>
+      <td>Interception</td>
+      <td><%= @football_league.int %></td>
     </tr>
-  </thead>
-  <tr>
-    <td>Touchdown</td>
-    <td><%= @football_league.rec_td %></td>
-  </tr>
-  <tr>
-    <td>Every 10 Yards</td>
-    <td><%= @football_league.rec_yards %></td>
-  </tr>
-  <tr>
-    <td>2 point conv</td>
-    <td><%= @football_league.rec_2pt %></td>
-  </tr>
-</table>
-<table class="table table-bordered table-hover">
-  <thead>
     <tr>
-      <th>Kicking</th>
+      <td>2 point conv</td>
+      <td><%= @football_league.pass_2pt %></td>
     </tr>
-  </thead>
-  <tr>
-    <td>Made Field Goal</td>
-    <td><%= @football_league.fg_made %></td>
-  </tr>
-  <tr>
-    <td>Missed Field Goal</td>
-    <td><%= @football_league.fg_missed %></td>
-  </tr>
-  <tr>
-    <td>Made PAT</td>
-    <td><%= @football_league.pat_made %></td>
-  </tr>
-</table>
+  </table>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Rush</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>Touchdown</td>
+      <td><%= @football_league.rush_td %></td>
+    </tr>
+    <tr>
+      <td>Every 10 Yards</td>
+      <td><%= @football_league.rush_yards %></td>
+    </tr>
+    <tr>
+      <td>2 point conv</td>
+      <td><%= @football_league.rush_2pt %></td>
+    </tr>
+  </table>
+</div>
+<div class="span5">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Receiving</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>Touchdown</td>
+      <td><%= @football_league.rec_td %></td>
+    </tr>
+    <tr>
+      <td>Every 10 Yards</td>
+      <td><%= @football_league.rec_yards %></td>
+    </tr>
+    <tr>
+      <td>2 point conv</td>
+      <td><%= @football_league.rec_2pt %></td>
+    </tr>
+  </table>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Kicking</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>Made Field Goal</td>
+      <td><%= @football_league.fg_made %></td>
+    </tr>
+    <tr>
+      <td>Missed Field Goal</td>
+      <td><%= @football_league.fg_missed %></td>
+    </tr>
+    <tr>
+      <td>Made PAT</td>
+      <td><%= @football_league.pat_made %></td>
+    </tr>
+  </table>
+</div>

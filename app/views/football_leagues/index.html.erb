@@ -1,14 +1,14 @@
 <% if @football_leagues.empty? %>
-    <h4><%= "You have no Leagues, please click Add to create a league" %></h4>
+    <h4 class="league-index-text"><%= "You have no Leagues, please click Add to create a league" %></h4>
 <% else %>
-  <h3>Here are your Football Leagues!</h3>
-  <ul>
+  <h3 class="league-index-text">Here are your Football Leagues!</h3>
   <% @football_leagues.each do |league| %>
-    <li><%= link_to league.name, user_football_league_path(@user, league) %></li>
+    <div class="span12 pagination-centered">
+      <%= link_to league.name, user_football_league_path(@user, league) %>
+    </div>
   <% end %>
-  </ul
 <% end %>
-<div class="btn-group">
+<div class="btn-group pagination-centered span12" id="league-index-btns">
   <%= link_to "Add", new_user_football_league_path(@user), :class => "btn" %>
   <%= link_to "Calculate", user_calculate_index_path(@user), :class => "btn" %>
 </div>

@@ -108,8 +108,3 @@
     </tr>
   </table>
 <% end %>
-<ul>
-  <% @user.football_leagues.each do |league| %>
-    <li><%= "#{league.name} score is #{@player.scores(@stats, league)}" %></li>
-  <% end %>
-</ul>
