@@ -4,7 +4,7 @@
 <% else %>
   <p id="calculate-text">Please select the position of your player</p>
   <br>
-  <div class="btn-group pagination-centered span12">
+  <div class="btn-group pagination-centered span6 offset4">
     <%= link_to "Quarterback", user_football_players_path(current_user, position: "QB"),  :class => "btn" %>
     <%= link_to "Running Back", user_football_players_path(current_user, position: "RB"), :class => "btn" %>
     <%= link_to "Tight End", user_football_players_path(current_user, position: "TE"), :class => "btn" %>
@@ -13,7 +13,7 @@
     <%= link_to "Kicker", user_football_players_path(current_user, position: "K"), :class => "btn" %>
   </div>
   <br><br><br>
-  <div class="span12 pagination-centered">
+  <div class="span2 offset7 pagination-centered">
     <%= link_to "Back to leagues", user_football_leagues_path(@user), :class => "btn pagination-centered" %>
   </div>
 <% end %>

@@ -3,12 +3,12 @@
 <% else %>
   <h3 class="league-index-text">Here are your Football Leagues!</h3>
   <% @football_leagues.each do |league| %>
-    <div class="span12 pagination-centered">
+    <div class="pagination-centered text-center" id="league-list">
       <%= link_to league.name, user_football_league_path(@user, league) %>
     </div>
   <% end %>
 <% end %>
-<div class="btn-group pagination-centered span12" id="league-index-btns">
+<div class="btn-group pagination-centered span6 offset5" id="league-index-btns">
   <%= link_to "Add", new_user_football_league_path(@user), :class => "btn" %>
   <%= link_to "Calculate", user_calculate_index_path(@user), :class => "btn" %>
 </div>
