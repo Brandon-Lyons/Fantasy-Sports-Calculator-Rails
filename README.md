@@ -22,6 +22,8 @@ then create the database<br />
 `rake db:create:all`<br />
 run the migrations<br />
 `rake db:migrate`<br />
+migrate seed data<br />
+`rake db:seed`<br />
 then start the server<br />
 `rails s`<br />
 To run the tests:<br />
