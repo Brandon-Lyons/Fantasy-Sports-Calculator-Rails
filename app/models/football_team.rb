@@ -7,4 +7,8 @@ class FootballTeam < ActiveRecord::Base
     profile_team(team)
   end
 
+  def stats(year, week, team)
+    stats_team(year, week, team)
+  end
+
 end

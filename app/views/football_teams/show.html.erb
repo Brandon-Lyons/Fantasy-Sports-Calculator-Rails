@@ -5,6 +5,7 @@
     <%= render "profile_stats" %>
   </div>
 </div>
+<br>
 <%= form_tag("/users/#{@user.id}/football_teams", :method => "post") do %>
   <%= text_field_tag("stats[year]", nil, :placeholder => "Year") %>
   <%= text_field_tag("stats[week]", nil, :placeholder => "Week") %>
@@ -12,5 +13,3 @@
   <%= submit_tag "Calculate" %>
 <% end %>
 <%= link_to "Back to Team List", user_football_teams_path(@user), :class => "btn" %>
-
-<%= @profile %>
