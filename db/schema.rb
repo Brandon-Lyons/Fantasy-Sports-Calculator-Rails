@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20130622200200) do
   create_table "football_teams", :force => true do |t|
     t.string "full_name"
     t.string "abbr_name"
+    t.string "photo"
   end
 
   create_table "user_football_leagues", :force => true do |t|

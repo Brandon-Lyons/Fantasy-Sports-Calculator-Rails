@@ -1,1 +1,16 @@
 <h2><%= @team.full_name %></h2>
+<div class="row-fluid" id="profile">
+  <img src="<%= @team.photo %>" data-src="holder.js/300x200" class="thumbnail span3">
+  <div class="span5">
+    <%= render "profile_stats" %>
+  </div>
+</div>
+<%= form_tag("/users/#{@user.id}/football_teams", :method => "post") do %>
+  <%= text_field_tag("stats[year]", nil, :placeholder => "Year") %>
+  <%= text_field_tag("stats[week]", nil, :placeholder => "Week") %>
+  <%= hidden_field_tag("stats[team_id]", "#{@team.abbr_name}") %>
+  <%= submit_tag "Calculate" %>
+<% end %>
+<%= link_to "Back to Team List", user_football_teams_path(@user), :class => "btn" %>
+
+<%= @profile %>

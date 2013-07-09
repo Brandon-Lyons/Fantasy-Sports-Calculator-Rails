@@ -1,5 +1,10 @@
 require './lib/interface'
 class FootballTeam < ActiveRecord::Base
-  attr_accessible :full_name, :abbr_name
+  include Interface
+  attr_accessible :full_name, :abbr_name, :photo
+
+  def profile(team)
+    profile_team(team)
+  end
 
 end
