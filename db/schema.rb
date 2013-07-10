@@ -11,23 +11,42 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130622200200) do
+ActiveRecord::Schema.define(:version => 20130710125000) do
 
   create_table "football_leagues", :force => true do |t|
     t.string  "name"
-    t.integer "pass_td",    :default => 6
-    t.integer "pass_yards", :default => 1
-    t.integer "int",        :default => -2
-    t.integer "pass_2pt",   :default => 2
-    t.integer "rush_yards", :default => 1
-    t.integer "rush_td",    :default => 6
-    t.integer "rush_2pt",   :default => 2
-    t.integer "rec_yards",  :default => 1
-    t.integer "rec_td",     :default => 6
-    t.integer "rec_2pt",    :default => 2
-    t.integer "fg_made",    :default => 3
-    t.integer "fg_missed",  :default => -1
-    t.integer "pat_made",   :default => 1
+    t.integer "pass_td",        :default => 6
+    t.integer "pass_yards",     :default => 1
+    t.integer "int",            :default => -2
+    t.integer "pass_2pt",       :default => 2
+    t.integer "rush_yards",     :default => 1
+    t.integer "rush_td",        :default => 6
+    t.integer "rush_2pt",       :default => 2
+    t.integer "rec_yards",      :default => 1
+    t.integer "rec_td",         :default => 6
+    t.integer "rec_2pt",        :default => 2
+    t.integer "fg_made",        :default => 3
+    t.integer "fg_missed",      :default => -1
+    t.integer "pat_made",       :default => 1
+    t.integer "kick_td",        :default => 6
+    t.integer "punt_td",        :default => 6
+    t.integer "int_td",         :default => 6
+    t.integer "block_kick_td",  :default => 6
+    t.integer "fumb_td",        :default => 6
+    t.integer "fumb_lost",      :default => -2
+    t.integer "def_int",        :default => 2
+    t.integer "def_fumb",       :default => 2
+    t.integer "def_block_kick", :default => 2
+    t.integer "def_sack",       :default => 1
+    t.integer "def_safety",     :default => 2
+    t.integer "pts_all_0",      :default => 5
+    t.integer "pts_all_6",      :default => 4
+    t.integer "pts_all_13",     :default => 3
+    t.integer "pts_all_17",     :default => 1
+    t.integer "pts_all_27",     :default => 0
+    t.integer "pts_all_34",     :default => -1
+    t.integer "pts_all_45",     :default => -3
+    t.integer "pts_all_46",     :default => -5
   end
 
   create_table "football_players", :force => true do |t|

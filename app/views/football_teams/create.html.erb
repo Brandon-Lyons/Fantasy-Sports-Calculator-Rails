@@ -2,4 +2,13 @@
   <img src="<%= @team.photo %>" data-src="holder.js/300x200" class="span3">
   <img src="<%= @opposing_team.photo %>" data-src="holder.js/300x200" class="span3">
 </div>
-<%= @stats %>
+<ul id="score-list">
+  <% @user.football_leagues.each do |league| %>
+    <li><strong><%= "#{league.name.upcase} score is #{@team.score(@stats, league)}" %></strong></li>
+  <% end %>
+</ul>
+<div class="btn-group">
+  <%= link_to "Back to player select", user_calculate_index_path(@user), :class => "btn" %>
+  <%= link_to "Back to user profile", user_path(@user), :class => "btn" %>
+  <%= link_to "Back to team profile", user_football_team_path(@user, @team), :class => "btn" %>
+</div>

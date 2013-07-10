@@ -15,6 +15,7 @@ class CreateMiscDefenseColumns < ActiveRecord::Migration
       add_column(:football_leagues, :pts_all_6, :integer, :default => 4)
       add_column(:football_leagues, :pts_all_13, :integer, :default => 3)
       add_column(:football_leagues, :pts_all_17, :integer, :default => 1)
+      add_column( :football_leagues, :pts_all_27, :integer, :default => 0)
       add_column(:football_leagues, :pts_all_34, :integer, :default => -1)
       add_column(:football_leagues, :pts_all_45, :integer, :default => -3)
       add_column(:football_leagues, :pts_all_46, :integer, :default => -5) 

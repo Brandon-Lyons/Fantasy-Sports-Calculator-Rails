@@ -12,4 +12,4 @@
   <%= hidden_field_tag("stats[team_id]", "#{@team.abbr_name}") %>
   <%= submit_tag "Calculate" %>
 <% end %>
-<%= link_to "Back to Team List", user_football_teams_path(@user), :class => "btn" %>
+<%= link_to "Back to Player List", user_calculate_index_path(@user), :class => "btn" %>
