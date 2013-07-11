@@ -29,16 +29,8 @@ class FootballLeaguesController < ApplicationController
   end
 
   def update
-    p params
     @football_league = FootballLeague.find( params[:id] )
-    hash = params[:football_league]
-    new_hash = Hash[ hash.map{ |a, b| [a,
-      begin
-        Integer b
-      rescue ArgumentError
-        b
-      end]}]
-    if @football_league.update_attributes( new_hash )
+    if @football_league.update_attributes( params[:football_league] )
       redirect_to user_football_league_url(current_user, @football_league)
     else
       flash[:notice] = @football_league.errors.full_messages.join
