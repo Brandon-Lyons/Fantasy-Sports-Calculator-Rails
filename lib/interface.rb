@@ -1,6 +1,5 @@
 require 'net/http'
 require 'json'
-require 'pry'
 module Interface
 
   def nfl_data(url)
