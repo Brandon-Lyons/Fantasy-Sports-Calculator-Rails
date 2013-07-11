@@ -1,5 +1,6 @@
 require 'net/http'
 require 'json'
+require 'pry'
 module Interface
 
   def nfl_data(url)
@@ -47,11 +48,19 @@ module Interface
   end
 
   def stats_team(year, week, team)
-    url = "http://api.nfldata.apiphany.com/developer/JSON/FantasyDefenseByGame/#{year}/#{week}"
-    response = nfl_data(url)
-    stats = JSON.parse(response.body)
-    hash = stats.select{|key, hash| key["Team"] == team.abbr_name }.first
-    hash
+    if year.empty? || week.empty?
+      hash = {"error" => "A year or week is needed to calculate."}
+    else
+      url = "http://api.nfldata.apiphany.com/developer/JSON/FantasyDefenseByGame/#{year}/#{week}"
+      response = nfl_data(url)
+      stats = JSON.parse(response.body)
+      hash = stats.select{|key, hash| key["Team"] == team.abbr_name }.first
+    end
+    if hash.nil?
+      return {"error" => "Sorry there are no stats to show! Please go back and enter a valid week and/or year. This sometimes happens if the team is on a bye week."}      
+    else
+      return hash
+    end
   end
 
 end

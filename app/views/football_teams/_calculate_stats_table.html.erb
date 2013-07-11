@@ -1,0 +1,17 @@
+<h4>Opponent: <%= @opposing_team.full_name %></h4>
+<table class="table table-hover table-bordered">
+  <thead class="text-center">
+    <tr>
+      <th>Sacks</th>
+      <th>Int</th>
+      <th>Fumbles Rec</th>
+      <th>Points Allowed</th>
+    </tr>
+  </thead>
+  <tr>
+    <td><%= @stats["Sacks"] %></td>
+    <td><%= @stats["Interceptions"] %></td>
+    <td><%= @stats["FumblesRecovered"] %></td>
+    <td><%= @stats["PointsAllowed"] %></td>
+  </tr>
+</table>

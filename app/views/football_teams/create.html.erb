@@ -1,12 +1,25 @@
-<div class="row-fluid" id="profile">
-  <img src="<%= @team.photo %>" data-src="holder.js/300x200" class="span3">
-  <img src="<%= @opposing_team.photo %>" data-src="holder.js/300x200" class="span3">
-</div>
-<ul id="score-list">
-  <% @user.football_leagues.each do |league| %>
-    <li><strong><%= "#{league.name.upcase} score is #{@team.score(@stats, league)}" %></strong></li>
-  <% end %>
-</ul>
+<% if @stats.has_key?("error") %>
+  <p><%= @stats["error"] %></p>
+<% else %>
+  <div class="row-fluid" id="profile">
+    <div class="span6" id="team-logos">
+      <img src="<%= @team.photo %>" data-src="holder.js/300x200" class="span3 team-logo">
+      <br>
+      <h4>VS</h4>
+      <img src="<%= @opposing_team.photo %>" data-src="holder.js/300x200" class="span3 team-logo">
+    </div>
+    <div class="span6">
+      <%= render "calculate_stats_table" %>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <ul id="score-list">
+      <% @user.football_leagues.each do |league| %>
+        <li><strong><%= "#{league.name.upcase} score is #{@team.score(@stats, league)}" %></strong></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <div class="btn-group">
   <%= link_to "Back to player select", user_calculate_index_path(@user), :class => "btn" %>
   <%= link_to "Back to user profile", user_path(@user), :class => "btn" %>

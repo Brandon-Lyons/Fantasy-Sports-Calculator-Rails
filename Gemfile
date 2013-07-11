@@ -26,6 +26,7 @@ group :assets do
 end
 
 group :test do
+  gem 'pry'
   gem 'capybara'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
