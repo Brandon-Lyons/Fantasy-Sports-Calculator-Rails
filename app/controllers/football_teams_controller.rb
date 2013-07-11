@@ -15,7 +15,7 @@ class FootballTeamsController < ApplicationController
     @team = FootballTeam.where(abbr_name: params[:stats][:team_id]).first
     @profile = @team.profile(@team)
     @stats = @team.stats(params[:stats][:year], params[:stats][:week], @team)
-    # @opposing_team = FootballTeam.where(abbr_name: @stats["Opponent"]).first unless @stats.has_key?("error")
+    @opposing_team = FootballTeam.where(abbr_name: @stats["Opponent"]).first unless @stats.has_key?("error")
   end
 
 end
