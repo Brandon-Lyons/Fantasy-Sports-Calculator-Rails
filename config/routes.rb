@@ -3,6 +3,10 @@ FantasySportsCalculator::Application.routes.draw do
   resources :users do
     resources :calculate, only: :index
     resources :football_leagues
+    resources :basketball_leagues
+    resources :baseball_leagues
+    resources :soccer_leagues
+    resources :hockey_leagues
     resources :football_players
     resources :football_teams
   end

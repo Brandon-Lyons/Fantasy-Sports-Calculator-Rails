@@ -1,93 +1,93 @@
 <%= form_for [current_user, @football_league] do |f| %>
-    <%= f.label :name, "Name"  %>
-    <%= f.text_field :name %>
-    <div class="row-fluid">
-        <div class="span3">
-            <h3>Pass</h3>
-            <%= f.label :pass_td, "Touchdown" %>
-            <%= f.number_field :pass_td %>
-            <%= f.label :pass_yards, "Every 25 Yards" %>
-            <%= f.number_field :pass_yards %>
-            <%= f.label :int, "Interception" %>
-            <%= f.number_field :int %>
-            <%= f.label :pass_2pt, "2 point conversion" %>
-            <%= f.number_field :pass_2pt %>
-        </div>
-        <div class="span3">
-            <h3>Rush</h3>
-            <%= f.label :rush_td, "Touchdown" %>
-            <%= f.number_field :rush_td %>
-            <%= f.label :rush_yards, "Every 10 Yards" %>
-            <%= f.number_field :rush_yards %>
-            <%= f.label :rush_2pt, "2 point conversion" %>
-            <%= f.number_field :rush_2pt %>
-        </div>
-        <div class="span3">
-            <h3>Receiving</h3>
-            <%= f.label :rec_td, "Touchdown" %>
-            <%= f.number_field :rec_td %>
-            <%= f.label :rec_yards, "Every 10 Yards" %>
-            <%= f.number_field :rec_yards %>
-            <%= f.label :rec_2pt, "2 point conversion" %>
-            <%= f.number_field :rec_2pt %>
-        </div>
-        <div class="span3">
-            <h3>Kicking</h3>
-            <%= f.label :fg_made, "Made Field Goal" %>
-            <%= f.number_field :fg_made %>
-            <%= f.label :fg_missed, "Missed Field Goal" %>
-            <%= f.number_field :fg_missed %>
-            <%= f.label :pat_made, "Made PAT" %>
-            <%= f.number_field :pat_made %>
-        </div>
-    </div>
-    <div class="row-fluid">
-        <div class="span3">
-            <h3>Miscellaneous</h3>
-            <%= f.label :kick_td, "Kick Return TD" %>
-            <%= f.number_field :kick_td %>
-            <%= f.label :punt_td, "Punt Return TD" %>
-            <%= f.number_field :punt_td %>
-            <%= f.label :int_td, "Interception Return TD" %>
-            <%= f.number_field :int_td %>
-            <%= f.label :block_kick_td, "Blocked Kick/Punt Return TD" %>
-            <%= f.number_field :block_kick_td %>
-            <%= f.label :fumb_td, "Fumble Return TD" %>
-            <%= f.number_field :fumb_td %>
-            <%= f.label :fumb_lost, "Fumble Lost" %>
-            <%= f.number_field :fumb_lost %>
-        </div>
-        <h3>Defense/Special Teams</h3>
-        <div class="span3">
-            <%= f.label :def_sack, "Each Sack" %>
-            <%= f.number_field :def_sack %>
-            <%= f.label :def_block_kick, "Blocked Kick/Punt/PAT" %>
-            <%= f.number_field :def_block_kick %>
-            <%= f.label :def_fumb, "Fumble Recovery" %>
-            <%= f.number_field :def_fumb %>
-            <%= f.label :def_int, "Each Interception" %>
-            <%= f.number_field :def_int %>
-            <%= f.label :def_safety, "Each Safety" %>
-            <%= f.number_field :def_safety %>
-        </div>
-        <div class="span3">
-            <%= f.label :pts_all_0, "0 points allowed" %>
-            <%= f.number_field :pts_all_0 %>
-            <%= f.label :pts_all_6, "1-6 points allowed" %>
-            <%= f.number_field :pts_all_6 %>
-            <%= f.label :pts_all_13, "7-13 pints allowed" %>
-            <%= f.number_field :pts_all_13 %>
-            <%= f.label :pts_all_17, "14-17 points allowed" %>
-            <%= f.number_field :pts_all_17 %>
-            <%= f.label :pts_all_27, "18-27 points allowed" %>
-            <%= f.number_field :pts_all_27 %>
-            <%= f.label :pts_all_34, "28-34 points allowed" %>
-            <%= f.number_field :pts_all_34 %>
-            <%= f.label :pts_all_45, "35-45 points allowed" %>
-            <%= f.number_field :pts_all_45 %>
-            <%= f.label :pts_all_46, "46+ points allowed" %>
-            <%= f.number_field :pts_all_46 %>
-        </div>
-    </div>
-        <%= f.submit "Submit" %>
+  <%= f.label :name, "Name"  %>
+  <%= f.text_field :name %>
+  <div class="row-fluid">
+      <div class="span3">
+        <h3>Pass</h3>
+        <%= f.label :pass_td, "Touchdown" %>
+        <%= f.number_field :pass_td %>
+        <%= f.label :pass_yards, "Every 25 Yards" %>
+        <%= f.number_field :pass_yards %>
+        <%= f.label :int, "Interception" %>
+        <%= f.number_field :int %>
+        <%= f.label :pass_2pt, "2 point conversion" %>
+        <%= f.number_field :pass_2pt %>
+      </div>
+      <div class="span3">
+        <h3>Rush</h3>
+        <%= f.label :rush_td, "Touchdown" %>
+        <%= f.number_field :rush_td %>
+        <%= f.label :rush_yards, "Every 10 Yards" %>
+        <%= f.number_field :rush_yards %>
+        <%= f.label :rush_2pt, "2 point conversion" %>
+        <%= f.number_field :rush_2pt %>
+      </div>
+      <div class="span3">
+        <h3>Receiving</h3>
+        <%= f.label :rec_td, "Touchdown" %>
+        <%= f.number_field :rec_td %>
+        <%= f.label :rec_yards, "Every 10 Yards" %>
+        <%= f.number_field :rec_yards %>
+        <%= f.label :rec_2pt, "2 point conversion" %>
+        <%= f.number_field :rec_2pt %>
+      </div>
+      <div class="span3">
+        <h3>Kicking</h3>
+        <%= f.label :fg_made, "Made Field Goal" %>
+        <%= f.number_field :fg_made %>
+        <%= f.label :fg_missed, "Missed Field Goal" %>
+        <%= f.number_field :fg_missed %>
+        <%= f.label :pat_made, "Made PAT" %>
+        <%= f.number_field :pat_made %>
+      </div>
+  </div>
+  <div class="row-fluid">
+      <div class="span3">
+        <h3>Miscellaneous</h3>
+        <%= f.label :kick_td, "Kick Return TD" %>
+        <%= f.number_field :kick_td %>
+        <%= f.label :punt_td, "Punt Return TD" %>
+        <%= f.number_field :punt_td %>
+        <%= f.label :int_td, "Interception Return TD" %>
+        <%= f.number_field :int_td %>
+        <%= f.label :block_kick_td, "Blocked Kick/Punt Return TD" %>
+        <%= f.number_field :block_kick_td %>
+        <%= f.label :fumb_td, "Fumble Return TD" %>
+        <%= f.number_field :fumb_td %>
+        <%= f.label :fumb_lost, "Fumble Lost" %>
+        <%= f.number_field :fumb_lost %>
+      </div>
+      <h3>Defense/Special Teams</h3>
+      <div class="span3">
+        <%= f.label :def_sack, "Each Sack" %>
+        <%= f.number_field :def_sack %>
+        <%= f.label :def_block_kick, "Blocked Kick/Punt/PAT" %>
+        <%= f.number_field :def_block_kick %>
+        <%= f.label :def_fumb, "Fumble Recovery" %>
+        <%= f.number_field :def_fumb %>
+        <%= f.label :def_int, "Each Interception" %>
+        <%= f.number_field :def_int %>
+        <%= f.label :def_safety, "Each Safety" %>
+        <%= f.number_field :def_safety %>
+      </div>
+      <div class="span3">
+        <%= f.label :pts_all_0, "0 points allowed" %>
+        <%= f.number_field :pts_all_0 %>
+        <%= f.label :pts_all_6, "1-6 points allowed" %>
+        <%= f.number_field :pts_all_6 %>
+        <%= f.label :pts_all_13, "7-13 pints allowed" %>
+        <%= f.number_field :pts_all_13 %>
+        <%= f.label :pts_all_17, "14-17 points allowed" %>
+        <%= f.number_field :pts_all_17 %>
+        <%= f.label :pts_all_27, "18-27 points allowed" %>
+        <%= f.number_field :pts_all_27 %>
+        <%= f.label :pts_all_34, "28-34 points allowed" %>
+        <%= f.number_field :pts_all_34 %>
+        <%= f.label :pts_all_45, "35-45 points allowed" %>
+        <%= f.number_field :pts_all_45 %>
+        <%= f.label :pts_all_46, "46+ points allowed" %>
+        <%= f.number_field :pts_all_46 %>
+      </div>
+  </div>
+  <%= f.submit "Submit" %>
 <% end %>

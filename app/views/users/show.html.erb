@@ -4,6 +4,10 @@
   <h2 class="profile-text"><%= "Welcome, #{@user.first_name}!" %></h2>
 <% end %>
 <p class="profile-text">Here are the sports you can calculate for. Pick one and start calculating!</p>
-<div class="btn-group span12 pagination-centered">
+<div class="btn-group pagination-centered" style="margin-left: 35%">
   <%= link_to "Football", user_football_leagues_path(current_user), :class => "btn" %>
+  <%= link_to "Basketball", user_basketball_leagues_path(current_user), :class => "btn disabled" %>
+  <%= link_to "Baseball", user_baseball_leagues_path(current_user), :class => "btn disabled" %>
+  <%= link_to "Soccer", user_soccer_leagues_path(current_user), :class => "btn disabled" %>
+  <%= link_to "Hockey", user_hockey_leagues_path(current_user), :class => "btn disabled" %>
 </div>
